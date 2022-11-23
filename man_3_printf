@@ -1,0 +1,45 @@
+.TH _PRINTF 1
+.SH NAME
+_printf \- format and print data
+.SH SYNOPSIS
+.B _printf
+\fIFORMAT\fR
+[\fIARGUMENT...\fR]
+.SH DESCRIPTION
+.TP
+.B _printf:
+Writes output to the standard output stream under the control of the format.
+.PP
+The formate is a character string: plain characters, which are simply copied
+to standard output.
+.TP
+Format:
+A character which indicates the type of format to use(one of the following:)
+.TP
+.B c
+The first character of argument is printed.
+.TP
+.B s
+Characters from an argument are printed until the end is reached.
+.TP
+.B %
+Prints a '%'; no argument is used.
+.TP
+.B d
+Prints an Long Integer.
+.TP
+.B i
+Prints an Integer.
+.SH EXAMPLES
+To write some text to the standard output, use the
+.BR _printf (1)
+command:
+.PP
+.nf
+.RS
+_printf ("this is a %s format\n", usual string);
+.RE
+.fi
+.PP
+.SH AUTHOR
+JOSEPH.
