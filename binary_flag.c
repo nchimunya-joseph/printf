@@ -9,6 +9,7 @@ int pr_bin(va_list arg)
 {
 	int d = va_arg(arg, int);
 	int i = 0;
+
 	if (d < 0)
 	{
 		return (-1);
@@ -32,6 +33,7 @@ int pr_bin(va_list arg)
 int return_binary(int d)
 {
 	int i = 0;
+
 	if (d == 1)
 	{
 		_putchar(d + '0');

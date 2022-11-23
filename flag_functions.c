@@ -8,6 +8,7 @@
 int pr_char(va_list arg)
 {
 	char c;
+
 	c = va_arg(arg, int);
 	_putchar(c);
 	return (1);
@@ -51,7 +52,7 @@ int pr_int(va_list arg)
 		{
 			one_dig = number / mult;
 			_putchar(one_dig + '0');
-			number = number - (one_dig *mult);
+			number = number - (one_dig * mult);
 			mult = mult / 10;
 			i++;
 		}
@@ -99,7 +100,7 @@ int pr_uns(va_list arg)
 		{
 			one_dig = number / mult;
 			_putchar(one_dig + '0');
-			number = number - (one_dig *mult);
+			number = number - (one_dig * mult);
 			mult = mult / 10;
 			i++;
 		}
@@ -119,7 +120,9 @@ int pr_str(va_list arg)
 {
 	char *s;
 	int i = 0;
+
 	s = va_arg(arg, char *);
+
 	if (s == NULL)
 	{
 		s = "(null)";
